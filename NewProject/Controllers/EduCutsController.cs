@@ -130,7 +130,10 @@ namespace NewProject.Controllers
             return View();
         }
         [HttpPost]
-
+        public IActionResult SaveSocialNetwork()
+        {
+            return View();
+        }
 
 
     }
