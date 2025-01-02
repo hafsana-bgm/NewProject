@@ -1,0 +1,49 @@
+﻿@{
+    Layout = "~/Views/Shared/_EducutLayout.cshtml";
+    ViewData["Title"] = "EduCtu Contact Page";
+}
+@model NewProject.DataModels.Contact
+
+
+
+
+<!-- contact section -->
+<section class="contact_section  long_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <div class="heading_container">
+                        <h2>
+                            Contact Us
+                        </h2>
+                    </div>
+
+                    <form asp-action="ContactUsSubmit" asp-controller="EduCuts">
+                        <div>
+                            <input type="text" asp-for="YourName" placeholder="Your Name" />
+                        </div>
+                        <div>
+                            <input type="text" asp-for="PhoneNumber" placeholder="Phone Number" />
+                        </div>
+                        <div>
+                            <input type="email" asp-for="Email" placeholder="Email" />
+                        </div>
+                        <div>
+                            <input type="text" asp-for="Message" placeholder="Image" />
+                        </div>
+
+                        <div class="btn_box">
+                            <button>
+                                SEND
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- end contact section -->

@@ -1,0 +1,57 @@
+﻿@using NewProject.DataModels
+@using System.Reflection.Metadata
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "EduCut Product Page";
+}
+
+@model IEnumerable< NewProject.DataModels.Blog>
+<!-- blog section -->
+
+<section class="blog_section layout_padding">
+    <div class="container">
+        <div class="heading_container">
+            <h2>
+                Latest Blog
+            </h2>
+        </div>
+        <div class="row">
+            @{
+                if(Model != null)
+                {
+                    foreach (var data in Model)
+                    {
+                        <div class="col-md-6 col-lg-4 mx-auto">
+                            <div class="box">
+                                <div class="img-box">
+                                    <img src="@data.BlogThumbnails" alt="">
+                                </div>
+                                <div class="detail-box">
+                                    <h5>
+                                        @data.BlogTitle
+                                    </h5>
+                                    <p>
+                                        @data.BlogContent
+                                    </p>
+                                    <a href="">
+                                        Read More
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+
+
+
+                    }
+                }
+            }
+            
+            
+
+        </div>
+    </div>
+</section>
+
+<!-- end blog section -->

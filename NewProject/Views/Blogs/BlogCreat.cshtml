@@ -1,0 +1,48 @@
+﻿
+@{
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+    ViewData["Title"] = "EduCut Product Page";
+}
+
+@model NewProject.DataModels.Blog
+
+
+<!-- contact section -->
+<section class="contact_section  long_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form_container">
+                    <div class="heading_container">
+                        <h2>
+                            Creat Furniture
+                        </h2>
+                    </div>
+
+                    <form asp-action="BlogSubmit" asp-controller="Blogs">
+                        <div>
+                            <input type="text" asp-for="BlogTitle" placeholder="Blog Title " />
+                        </div>
+                        <div>
+                            <input type="text" asp-for="BlogContent" placeholder="Blog Content " />
+                        </div>
+                        <div>
+                            <input type="text" asp-for="BlogThumbnails" placeholder="Blog Thumbnails" />
+                        </div>
+
+                        <div class="btn_box">
+                            <button>
+                                SEND
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<h1>hello</h1>
