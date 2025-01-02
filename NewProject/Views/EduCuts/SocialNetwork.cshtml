@@ -71,24 +71,28 @@
             
             var formdata ={
                 SocialName: $('SocialName').val(),
-                 Url: $('#lLink').val(),
-                 IconClass: $('#SocialIcon').val()
+                 lLink: $('#Link').val(),
+                 SocialIcon: $('#SocialIcon').val()
 
             };
+            //debugger;
             //console.log(formdata);
             $.ajax({
 
                 url: '/EduCuts/SaveSocialNetwork',
                 type:'POST',
-                success:function(response) { 
-                    alert('Social link saved successfully');
-                    console.log(response);
+                data:formdata,
+
+                success:function(response) {
+
+                    alert(response.message);
+                   console.log(response);
 
                 },
 
                 Error:function(Xhr, status, error) {
                     alert('Error saving social link');
-                    console.log(Xhr, responseText)
+                    console.log(Xhr, status, error)
                 }
 
             });

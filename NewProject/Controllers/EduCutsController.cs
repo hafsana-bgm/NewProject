@@ -134,7 +134,7 @@ namespace NewProject.Controllers
         {
             if (ModelState.IsValid) 
             {
-                return Json(new { Success = true, message = "Social link saved successfully!" });
+                return Json(new { Success = true, message = "Data saved!" });
             }
             return Json(new{ Success = false, message ="Invalid data!" });
         }
