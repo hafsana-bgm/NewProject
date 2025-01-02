@@ -78,15 +78,17 @@
             //console.log(formdata);
             $.ajax({
 
-                url: '',
-                type:'',
+                url: '/EduCuts/SaveSocialNetwork',
+                type:'POST',
                 success:function(response) { 
                     alert('Social link saved successfully');
+                    console.log(response);
 
                 },
 
-                Error:function() {
+                Error:function(Xhr, status, error) {
                     alert('Error saving social link');
+                    console.log(Xhr, responseText)
                 }
 
             });

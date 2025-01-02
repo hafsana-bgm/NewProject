@@ -130,9 +130,13 @@ namespace NewProject.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult SaveSocialNetwork()
+        public IActionResult SaveSocialNetwork(SocialLink SocialLink)
         {
-            return View();
+            if (ModelState.IsValid) 
+            {
+                return Json(new { Success = true, message = "Social link saved successfully!" });
+            }
+            return Json(new{ Success = false, message ="Invalid data!" });
         }
 
 
