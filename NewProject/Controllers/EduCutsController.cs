@@ -132,8 +132,10 @@ namespace NewProject.Controllers
         [HttpPost]
         public IActionResult SaveSocialNetwork(SocialLink SocialLink)
         {
-            if (ModelState.IsValid) 
+            if (SocialLink != null && SocialLink.SocialName != null && SocialLink.SocialIcon !=null && SocialLink.lLink != null) 
             {
+                _context.SocialLink.Add(SocialLink);
+                _context.SaveChanges();
                 return Json(new { Success = true, message = "Data saved!" });
             }
             return Json(new{ Success = false, message ="Invalid data!" });
