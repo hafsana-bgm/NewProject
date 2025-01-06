@@ -1,5 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.DotNet.Scaffolding.Shared.Messaging;
 using NewProject.Data;
+using NewProject.DataDatamodels;
 
 namespace NewProject.Controllers
 {
@@ -36,6 +38,25 @@ namespace NewProject.Controllers
         }
 
         public IActionResult SocialNetwork()
+        {
+            var AllProduct = _context.SocialMedias.ToList();
+            return View(AllProduct);
+        }
+        [HttpPost]
+        public IActionResult c(SocialMedia SocialMedia)
+        {
+            if (SocialMedia.SocialName !=null && SocialMedia.SocialIcon !=null && SocialMedia.socialLink !=null)
+            {
+                _context.SocialMedias.Add(SocialMedia);
+                _context.SaveChanges();
+                return Json(new { success = true, message = "Data Saved" });
+            }
+
+            return Json(new {success = false, message = "Invalid data"});
+           
+        }
+
+        public IActionResult SocialNetworkList()
         {
             return View();
         }

@@ -68,9 +68,40 @@
 	$(document).ready(function(){
 
 		$('#submitform').click(function() {
-		
-		
-		
+			
+			var formdata = {
+				SocialName: $('#SocialName').val(),
+				socialLink: $('#socialLink').val(),
+				SocialIcon: $('#SocialIcon').val()
+			
+			};
+			//console.log(formdata)
+
+			$.ajax({
+
+				url: '/Login/SocialNetwork',
+				type: 'POST',
+				data: formdata,
+				success: function(response){
+
+
+					Swal.fire({
+					  position: "top-end",
+					  icon: "success",
+					  title: "Your work has been saved",
+					  showConfirmButton: false,
+					  timer: 2000
+					});
+
+				},
+				error:function(){
+
+					alert('Error Submit')
+				
+				}
+
+			});
+
 		});
 
 	});
