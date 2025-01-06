@@ -23,10 +23,10 @@
 				<thead class="table-info">
 					<tr>
 						<th>Serial</th>
-						<th>Product Name</th>
-						<th>Product Image</th>
-						<th>Product Price</th>
-						<th>Action</th>
+						<th> Social Name</th>
+						<th>social Link</th>
+						<th>Social Icon</th>
+						 
 
 					</tr>
 				</thead>
@@ -38,19 +38,12 @@
 
 							<tr>
 								<td>@serial</td>
-								<td>@data.ProductName</td>
-								<td>
-									<img src="@data.ProductImage" style="width:15%;" />
-								</td>
-								<td>@data.ProductPrice</td>
+								<td>@data.SocialName</td>
+								<td>@data.socialLink</td>
+								<td>@data.SocialIcon</td>
 
 
-								<td>
-									<a class="btn btn-info" asp-action="ShopEdit" asp-route-id="@data.Id">Edit</a>
-
-									<a class="btn btn-danger" asp-action="ShopDelete" asp-route-id="@data.Id">Delete</a>
-
-								</td>
+								
 							</tr>
 							serial++;
 						}

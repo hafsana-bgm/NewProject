@@ -13,17 +13,39 @@ namespace NewProject.Controllers
         {
             _context = context;
         }
-
+       // Login start
         public IActionResult CreatId()
         {
             return View();
         }
 
+        [HttpPost]
+        public IActionResult CreatId(Login SocialMedia)
+        {
+            if (SocialMedia.Email != null && SocialMedia.Password != null)
+            {
+                _context.Logins.Add(SocialMedia);
+                _context.SaveChanges();
+                return Json(new { success = true, message = "Succussfully" });
+            }
+
+            return Json(new { success = false, message = "Invalid data" });
+
+        }
+
 
         public IActionResult ListId()
         {
-            return View();
+            var data = _context.Logins.ToList();
+
+            return View(data);
         } 
+
+
+        //login end
+
+
+
         public IActionResult SavingProduct()
         {
 
@@ -37,13 +59,15 @@ namespace NewProject.Controllers
             return View(AllProduct);
         }
 
+
+
         public IActionResult SocialNetwork()
         {
             var AllProduct = _context.SocialMedias.ToList();
             return View(AllProduct);
         }
         [HttpPost]
-        public IActionResult c(SocialMedia SocialMedia)
+        public IActionResult SocialNetwork(SocialMedia SocialMedia)
         {
             if (SocialMedia.SocialName !=null && SocialMedia.SocialIcon !=null && SocialMedia.socialLink !=null)
             {
@@ -58,7 +82,9 @@ namespace NewProject.Controllers
 
         public IActionResult SocialNetworkList()
         {
-            return View();
+            var data = _context.SocialMedias.ToList();
+
+            return View(data);
         }
 
 
