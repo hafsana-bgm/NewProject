@@ -46,25 +46,11 @@
             </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav  ">
-                    <li class="nav-item active">
-                        <a class="nav-link" asp-action="Index" asp-controller="Giftos">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-action="Shop" asp-controller="Giftos">
-                            Shop
-                        </a>
-                    </li>
-                    
-                    <li class="nav-item">
-                        <a class="nav-link" asp-action="Testimonial" asp-controller="Giftos">
-                            Testimonial
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" asp-action="ContactUs" asp-controller="Giftos">Contact Us</a>
-                    </li>
-                </ul>
+
+                @{
+                    Html.RenderPartial("GiftosMenu");
+                }
+
                 <div class="user_option">
                     <a href="">
                         <i class="fa fa-user" aria-hidden="true"></i>

@@ -20,12 +20,179 @@ namespace NewProject.Controllers
         } 
         public IActionResult Shop()
         {
+
+            var AllProduct = _context.Shops.ToList();
+            return View(AllProduct);
+        }
+
+       //start All Product 
+
+        public IActionResult AllProduct()
+        {
+            var Product = _context.Products.ToList();
+
+            return View(Product);
+           
+        }
+
+
+        public IActionResult CreatProduct()
+        {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult CreatProductSubmit(AllProduct model)
+        {
+            if (model.ProductName != null && model.ProductImage != null)
+            {
+                _context.Add(model);
+                _context.SaveChanges();
+
+            }
+
+            return RedirectToAction("CreatProduct");
+        }
+
+        public IActionResult ProductList()
+        {
+            var data = _context.Products.ToList();
+
+            return View(data);
+        }
+
+        public IActionResult ProductEdit(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var Contact = _context.Products.FirstOrDefault(shop => shop.Id == id);
+
+            return View(Contact);
+        }
+
+        [HttpPost]
+        public IActionResult ProductEdit(AllProduct datamodel)
+        {
+            if (datamodel.ProductName != null && datamodel.ProductImage != null)
+            {
+                _context.Update(datamodel);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("ProductList");
+        }
+
+        public IActionResult ProductDelete(int? id)
+
+        {
+            if (id == null)
+                return NotFound();
+
+            var list = _context.Products.FirstOrDefault(shop => shop.Id == id);
+
+            if (list == null)
+                return NotFound();
+
+            _context.Remove(list);
+            _context.SaveChanges();
+
+            return RedirectToAction("ProductList");
+
+        }
+        //end all product
+
+
+
+        // Start Shop
+        public IActionResult CreatShop()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatShopSubmit(Shop model)
+        {
+            if (model.ProductName != null && model.ProductImage != null )
+            {
+                _context.Add(model);
+                _context.SaveChanges();
+
+            }
+
+            return RedirectToAction("CreatShop");
+        }
+
+
+        public IActionResult ShopList()
+        {
+            var data = _context.Shops.ToList();
+
+            return View(data);
+        }
+
+        public IActionResult ShopEdit(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var Contact = _context.Shops.FirstOrDefault(shop => shop.Id == id);
+
+            return View(Contact);
+        }
+
+        [HttpPost]
+        public IActionResult ShopEdit(Shop datamodel)
+        {
+            if (datamodel.ProductName != null && datamodel.ProductImage != null )
+            {
+                _context.Update(datamodel);
+                _context.SaveChanges();
+            }
+            return RedirectToAction("ShopList");
+        }
+
+        public IActionResult ShopDelete(int? id)
+
+        {
+            if (id == null)
+                return NotFound();
+
+            var list = _context.Shops.FirstOrDefault(shop => shop.Id == id);
+
+            if (list == null)
+                return NotFound();
+
+            _context.Remove(list);
+            _context.SaveChanges();
+
+            return RedirectToAction("ShopList");
+
+        }
+
+        // end Shop
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+
         public IActionResult Testimonial()
         {
             return View();
-        } 
+        }
+
+
+        //Start Contact
+
         public IActionResult ContactUs()
         {
             return View();
@@ -94,9 +261,8 @@ namespace NewProject.Controllers
             return RedirectToAction("ContactList");
         }
 
-
-
-
+      
+        //end contact
 
 
     }

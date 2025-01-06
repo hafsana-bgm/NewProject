@@ -22,6 +22,7 @@ namespace NewProject.Data
         public DbSet<ContactUs> Contactus { get; set; } = default!;
 
         public DbSet<Shop> Shops { get; set; } = default!;
+        public DbSet<AllProduct> Products { get; set; } = default!;
 
 
 
