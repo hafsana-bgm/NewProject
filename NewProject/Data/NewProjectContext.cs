@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using NewProject.DataDatamodels;
 using NewProject.DataModels;
 
 namespace NewProject.Data
@@ -15,7 +16,13 @@ namespace NewProject.Data
         public DbSet<Books> Books { get; set; } = default!;
 
         public DbSet<Blog> Blog { get; set; } = default!;
+
         public DbSet<SocialLink> SocialLink { get; set; } = default!;
+
+        public DbSet<ContactUs> Contactus { get; set; } = default!;
+
+        public DbSet<Shop> Shops { get; set; } = default!;
+
 
 
     }

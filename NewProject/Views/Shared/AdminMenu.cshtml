@@ -35,15 +35,21 @@
             <li><a asp-action="BookList" asp-controller="Books"><i class="fa fa-circle-o"></i> Books Input</a></li>
 
             <li><a asp-action="BookInpt" asp-controller="Books"><i class="fa fa-circle-o"></i> Books List</a></li>
+         
+        </ul>
 
-            <li><a asp-action="SocialNetwork" asp-controller="EduCuts"><i class="fa fa-circle-o"></i>  Socia lNetwork</a></li>
+
+        <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Social Media</span> <i class="fa fa-angle-left pull-right"></i>
+        </a>
+        <ul class="treeview-menu">
+            <li><a asp-action="SocialNetwork" asp-controller="EduCuts"><i class="fa fa-circle-o"></i> Social Network</a></li>
+
         </ul>
 
                     </li>
 
-                    <li><a href="~/admin/documentation/index.html"><i class="fa fa-book"></i> Documentation</a></li>
-                    <li class="header">LABELS</li>
-                    <li><a href="#"><i class="fa fa-circle-o text-danger"></i> Important</a></li>
+    <li><a asp-action="ContactList" asp-controller="Giftos"><i class="fa fa-circle-o text-danger"></i> Contact List</a></li>
                     <li><a href="#"><i class="fa fa-circle-o text-warning"></i> Warning</a></li>
                     <li><a href="#"><i class="fa fa-circle-o text-info"></i> Information</a></li>
-                </ul>
+   </ul>

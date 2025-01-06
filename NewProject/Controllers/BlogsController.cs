@@ -103,7 +103,7 @@ namespace NewProject.Controllers
             _context.Remove(Furnituredata);
             _context.SaveChanges();
 
-            return RedirectToAction("BlogCreat");
+            return RedirectToAction("BlogList");
 
 
         }

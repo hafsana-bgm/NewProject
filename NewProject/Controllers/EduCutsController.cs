@@ -130,12 +130,17 @@ namespace NewProject.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult SaveSocialNetwork(SocialLink SocialLink)
+        public IActionResult SaveSocialNetwork(SocialLink Socialmedia)
         {
-            if (SocialLink != null && SocialLink.SocialName != null && SocialLink.SocialIcon !=null && SocialLink.lLink != null) 
+            if (Socialmedia != null && Socialmedia.SocialName != null && Socialmedia.SocialIcon !=null && Socialmedia.lLink != null) 
+
             {
-                _context.SocialLink.Add(SocialLink);
+                _context.SocialLink.Add(Socialmedia);
                 _context.SaveChanges();
+
+                //_context.SocialLink.Add(Socialmedia);
+                //_context.SaveChanges();
+
                 return Json(new { Success = true, message = "Data saved!" });
             }
             return Json(new{ Success = false, message ="Invalid data!" });

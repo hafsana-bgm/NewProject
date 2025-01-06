@@ -24,7 +24,7 @@ namespace NewProject.Controllers
         public IActionResult BookListSubmit(Books Bookdata)
         {
 
-            if (Bookdata.BookName != null && Bookdata.BookDescription != null && Bookdata.BookPrice != null)
+            if (Bookdata.BookName != null && Bookdata.BookDescription != null)
 
             {
                  _context.Add(Bookdata);

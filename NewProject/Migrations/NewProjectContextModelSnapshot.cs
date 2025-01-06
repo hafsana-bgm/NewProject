@@ -21,6 +21,31 @@ namespace NewProject.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
+            modelBuilder.Entity("NewProject.DataDatamodels.ContactUs", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Message")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Contactus");
+                });
+
             modelBuilder.Entity("NewProject.DataModels.Blog", b =>
                 {
                     b.Property<int>("BlogId")
@@ -107,13 +132,13 @@ namespace NewProject.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<string>("Link")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("SocialIcon")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SocialName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("lLink")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
