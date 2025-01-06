@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using NewProject.Data;
 
@@ -10,9 +11,11 @@ using NewProject.Data;
 namespace NewProject.Migrations
 {
     [DbContext(typeof(NewProjectContext))]
-    partial class NewProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20250106161840_Login_v1")]
+    partial class Login_v1
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -107,28 +110,6 @@ namespace NewProject.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Shops");
-                });
-
-            modelBuilder.Entity("NewProject.DataDatamodels.SocialMedia", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("SocialIcon")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("SocialName")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("socialLink")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SocialMedias");
                 });
 
             modelBuilder.Entity("NewProject.DataModels.Blog", b =>

@@ -16,7 +16,9 @@ namespace NewProject.Controllers
 
         public IActionResult Index()
         {
-            return View();
+            var AllProduct = _context.Shops.ToList();
+            return View(AllProduct);
+            
         } 
         public IActionResult Shop()
         {
