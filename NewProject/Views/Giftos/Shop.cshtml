@@ -22,7 +22,7 @@
                     {
                         <div class="col-sm-6 col-md-4 col-lg-3">
                             <div class="box">
-                                <a href="">
+                                <a asp-action="ShopDetails" asp-controller="Giftos" asp-route-id="@Shop.Id">
                                     <div class="img-box">
                                         <img src="@Shop.ProductImage" alt="">
                                     </div>
@@ -37,10 +37,14 @@
                                             </span>
                                         </h6>
                                     </div>
-                                    <div class="new">
-                                        <span>
-                                            New
-                                        </span>
+                                    <div>
+                                        @Shop.ProductCondition
+                                        
+                                    </div>
+
+                                    <div>
+                                        <button type="button" class="btn btn-primary">Add to Cart</button>
+                                        <button type="button" class="btn btn-success">Buy Now</button>
                                     </div>
                                 </a>
                             </div>

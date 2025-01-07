@@ -29,6 +29,8 @@ namespace NewProject.Data
 
         public DbSet<SocialMedia> SocialMedias { get; set; } = default!;
 
+        public DbSet<Accountcreat> AccountCreats { get; set; } = default!;
+
 
 
 

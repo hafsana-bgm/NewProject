@@ -84,6 +84,16 @@ namespace NewProject.Controllers
             return RedirectToAction("ProductList");
         }
 
+        public IActionResult ProductDetails(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var Product = _context.Products.FirstOrDefault(shop => shop.Id == id);
+
+            return View(Product);
+        }
+
         public IActionResult ProductDelete(int? id)
 
         {
@@ -171,6 +181,16 @@ namespace NewProject.Controllers
 
         }
 
+        public IActionResult ShopDetails(int? id)
+        {
+            if (id == null)
+                return NotFound();
+
+            var Product = _context.Shops.FirstOrDefault(shop => shop.Id == id);
+
+            return View(Product);
+        }
+
         // end Shop
 
 
@@ -185,7 +205,7 @@ namespace NewProject.Controllers
 
 
 
-       
+
 
         public IActionResult Testimonial()
         {

@@ -26,6 +26,7 @@
 						<th>Product Name</th>						
 						<th>Product Image</th>
 						<th>Product Price</th>
+						<th>Product Condition</th>
 						<th>Action</th>
 
 					</tr>
@@ -44,8 +45,10 @@
 								</td>
 								<td>@data.ProductPrice</td>
 								
-								
+								<td>@data.ProductCondition</td>
 								<td>
+									<a class="btn btn-success" asp-action="ShopDetails" asp-route-id="@data.Id">Details</a>
+
 									<a class="btn btn-info" asp-action="ShopEdit" asp-route-id="@data.Id">Edit</a>
 
 									<a class="btn btn-danger" asp-action="ShopDelete" asp-route-id="@data.Id">Delete</a>

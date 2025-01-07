@@ -88,6 +88,25 @@ namespace NewProject.Controllers
         }
 
 
+        public IActionResult CreatAccount()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult CreatAccount(Accountcreat accountcreat)
+        {
+            if (accountcreat.Email != null && accountcreat.Password != null && accountcreat.Name !=null)
+            {
+                _context.AccountCreats.Add(accountcreat);
+                _context.SaveChanges();
+                return Json(new { success = true, message = "Succussfully" });
+            }
+
+            return Json(new { success = false, message = "Invalid data" });
+
+        }
+
 
     }
 }

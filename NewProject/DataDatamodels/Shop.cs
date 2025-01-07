@@ -12,5 +12,9 @@ namespace NewProject.DataDatamodels
         public string? ProductImage { get; set; }
 
         public string? ProductPrice { get; set; }
+
+        public string? ProductCondition { get; set; }
+
+        public string? ProductDescription { get; set; }
     }
 }

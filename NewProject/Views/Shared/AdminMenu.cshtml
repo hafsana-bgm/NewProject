@@ -20,6 +20,12 @@
                 <p>Shop List</p>
             </a>
         </li>
+        <li class="nav-item">
+            <a asp-action="ContactList" asp-controller="Giftos" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Contact Listt</p>
+            </a>
+        </li>
       
 
      
@@ -78,7 +84,7 @@
         </li>
         
         <li class="nav-item">
-            <a aasp-controller="Login" asp-action="SocialNetworkList" class="nav-link">
+            <a asp-controller="Login" asp-action="SocialNetworkList" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Network List</p>
             </a>
@@ -91,27 +97,116 @@
 
 
 
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+            Blog Site
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a asp-action="Blog" asp-controller="Blogs" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Blogs</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="BlogCreat" asp-controller="Blogs" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Blogs Creat</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-action="BlogList" asp-controller="Blogs" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Blogs List</p>
+            </a>
+        </li>
+
+    </ul>
+</li>
 
 
-  @* <ul class="sidebar-menu">
-                    <li class="header">MAIN NAVIGATION</li>
-                    <li class="treeview">
-                        <a href="#">
-                            <i class="fa fa-dashboard"></i> <span>Blog Site</span> <i class="fa fa-angle-left pull-right"></i>
-                        </a>
-                      <ul class="treeview-menu">
 
-                        
-                         <li><a asp-action="Blog" asp-controller="Blogs"><i class="fa fa-circle-o"></i> Blogs </a>
-                         </li>
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+            Books
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        
+        <li class="nav-item">
+            <a asp-action="BookList" asp-controller="Books" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Books Creat</p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-action="BookInpt" asp-controller="Books" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Books List</p>
+            </a>
+        </li>
 
-            <li><a asp-action="BlogCreat" asp-controller="Blogs"><i class="fa fa-circle-o"></i> Blogs Creat</a></li>
 
-            <li><a asp-action="BlogList" asp-controller="Blogs"><i class="fa fa-circle-o"></i> Blogs List</a></li>
-                        </ul>
-                    </li>
+    </ul>
+</li>
 
-                    <li>
+
+
+
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+            Social Media
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a asp-action="SocialNetwork" asp-controller="EduCuts" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Social Network</p>
+            </a>
+        </li>
+
+        
+
+    </ul>
+</li>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  @*
 
 
 
@@ -144,7 +239,4 @@
 
                     </li>
 
-    <li><a asp-action="ContactList" asp-controller="Giftos"><i class="fa fa-circle-o text-danger"></i> Contact List</a></li>
-    <li><a asp-action="CreatShop" asp-controller="Giftos"><i class="fa fa-circle-o text-warning"></i> Create Shop</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o text-info"></i> Information</a></li>
-   </ul> *@
+     *@

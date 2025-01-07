@@ -2,11 +2,13 @@
 
 namespace NewProject.DataDatamodels
 {
-    public class Login
-
+    public class Accountcreat
     {
+
         [Key]
         public int Id { get; set; }
+
+        public string? Name { get; set; }
 
         public string? Email { get; set; }
 
