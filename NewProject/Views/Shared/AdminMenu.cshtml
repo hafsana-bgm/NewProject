@@ -1,4 +1,99 @@
-﻿  <ul class="sidebar-menu">
+﻿
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+            Shop
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a asp-action="CreatShop" asp-controller="Giftos" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Creat Shop </p>
+            </a>
+        </li>
+        <li class="nav-item">
+            <a asp-action="ShopList" asp-controller="Giftos" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Shop List</p>
+            </a>
+        </li>
+      
+
+     
+    </ul>
+</li>
+
+
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+           All Product
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a asp-controller="Giftos" asp-action="CreatProduct" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Creat Product</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-controller="Giftos" asp-action="ProductList" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Product List</p>
+            </a>
+        </li>
+
+    </ul>
+</li>
+
+
+<li class="nav-item">
+    <a href="#" class="nav-link">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <p>
+         User Login
+            <i class="right fas fa-angle-left"></i>
+        </p>
+    </a>
+    <ul class="nav nav-treeview">
+        <li class="nav-item">
+            <a asp-controller="Login" asp-action="ListId" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>User Login List</p>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a asp-controller="Login" asp-action="SocialNetwork" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Social Network</p>
+            </a>
+        </li>
+        
+        <li class="nav-item">
+            <a aasp-controller="Login" asp-action="SocialNetworkList" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Network List</p>
+            </a>
+        </li>
+
+    </ul>
+</li>
+
+
+
+
+
+
+
+  @* <ul class="sidebar-menu">
                     <li class="header">MAIN NAVIGATION</li>
                     <li class="treeview">
                         <a href="#">
@@ -52,4 +147,4 @@
     <li><a asp-action="ContactList" asp-controller="Giftos"><i class="fa fa-circle-o text-danger"></i> Contact List</a></li>
     <li><a asp-action="CreatShop" asp-controller="Giftos"><i class="fa fa-circle-o text-warning"></i> Create Shop</a></li>
                     <li><a href="#"><i class="fa fa-circle-o text-info"></i> Information</a></li>
-   </ul>
+   </ul> *@
